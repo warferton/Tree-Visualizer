@@ -1,14 +1,22 @@
-import {RegularTreeNode as Node} from "./tree_node.mjs"
+import {UnorderedTreeNode as Node} from "./tree_node.mjs"
 import List from "collections/list.js"
 
-function Tree(data) {
+
+/*
+    Class represents an unordered rooted tree data structure
+    with BF and DF traverse methods, and a cunstructor.
+    Utilizes UnorderedTreeNode class for its nodes.
+*/
+export default function Tree(data) {
     const node = new Node(data);
     this.root = node;
  }
 
- /* Using DF search traversion through a regular tree.
-  Inside func basically looks liek this: {recursion(this.root)}
-  then executes callback func */
+ /* 
+    Using DF search traversion through a regular tree.
+    Inside func basically looks liek this: {recursion(this.root)}
+    then executes callback func 
+*/
 Tree.prototype.traverseDF = function(callback){
     (function recursion(current_node){
         for(var i = 0, length = current_node.children.length; i < length; i++){
@@ -36,9 +44,9 @@ Tree.prototype.traverseBF = function(callback){
 }
 
 /*
-Constructs a tree with declared number of subtrees @param subtree_num,
-that have a random number of leaves.
-Complexity: O(n^2)
+    Constructs a tree with declared number of subtrees @param subtree_num,
+    that have a random number of leaves.
+    Complexity: O(n^2)
 */
 Tree.prototype.construct = function(subtree_num){
 
@@ -74,3 +82,6 @@ Tree.prototype.construct = function(subtree_num){
 //     console.log(node.data);
 //     console.log(node.children);
 // })
+
+
+//TODO code insertion, deletion, and update_leaf funcs
