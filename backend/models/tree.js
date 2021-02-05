@@ -58,11 +58,11 @@ Tree.prototype.construct = function(subtree_num){
     let current_node = queue.shift();
         
     while(flag > 0){
-        let leaf_num = Math.floor((Math.random() * 3));
+        let node_num = Math.floor((Math.random() * 3));
 
-        for(var j = 0; j < leaf_num; j++){
-            let leaf_load = Math.floor((Math.random() * 100) + 1);
-            current_node.children.push(new Node(leaf_load));
+        for(var j = 0; j < node_num; j++){
+            let node_load = Math.floor((Math.random() * 100) + 1);
+            current_node.children.push(new Node(node_load));
             current_node.children[j].parent = current_node;
             queue.push(current_node.children[j]);
         }
@@ -84,4 +84,4 @@ Tree.prototype.construct = function(subtree_num){
 // })
 
 
-//TODO code insertion, deletion, and update_leaf funcs
+//TODO code insertion, deletion, comparison, and update_node funcs

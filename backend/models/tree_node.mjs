@@ -11,13 +11,11 @@ export function BinaryTreeNode(data) {
         this.child_left = null
 }
 
-var test_node_1 = new UnorderedTreeNode(5);
-var test_node_2 = new UnorderedTreeNode(5);
+// var test_node_1 = new BinaryTreeNode(2);
+// var test_node_2 = new BinaryTreeNode(2);
 
-// UnorderedTreeNode.prototype.compareNodes = function(compare_node){
-//         return  this.parent === compare_node.parent &&
-//                 this.data === compare_node.data &&
-//                 this.children === compare_node.children
-// }
+// var test_node_3 = new BinaryTreeNode(5);
+// var test_node_4 = new BinaryTreeNode(5);
 
-// console.log(test_node_2.compareNodes(test_node_1));
+// test_node_3.child_left = test_node_1;
+// test_node_4.child_left = test_node_2;
